@@ -254,4 +254,3 @@ ResearchVerifier（检索 → 抽取 → 验证 → 置信度 → 回写修正�
 
 ---
 
-*本文档与 `README.md` 配套：README 面向项目展示，architecture.md 面向技术面试。两者定位不同，互为补充。*
