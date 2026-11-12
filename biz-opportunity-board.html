@@ -325,6 +325,50 @@
     .more-evidence { font-size: 0.78rem; color: var(--muted); font-family: var(--font-mono); margin-top: 0.45rem; }
     .note { color: var(--muted); font-size: 0.9rem; margin-top: 0.9rem; }
 
+    /* ---------- 故事区（仅作用于 #story） ---------- */
+    #story .story-quote {
+      border-left: 3px solid var(--accent); padding-left: 1rem; margin: 0 0 1.2rem;
+      font-size: 0.98rem; color: var(--ink);
+    }
+    #story .story-quote span { display: block; margin-top: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+    #story .story-h { font-size: 1rem; font-weight: 700; margin: 1.8rem 0 0.6rem; }
+    #story .story-table-wrap {
+      overflow-x: auto; margin-top: 0.7rem; border: 1px solid var(--rule);
+      border-radius: 6px; background: var(--bg2);
+    }
+    #story table { min-width: 0; }
+    #story thead th {
+      position: static; background: var(--bg); color: var(--muted);
+      font-size: 0.76rem; font-weight: 700; border-bottom: 1px solid var(--rule);
+      padding: 0.5rem 0.8rem; white-space: nowrap;
+    }
+    #story tbody td { padding: 0.5rem 0.8rem; }
+    #story tbody td:first-child { white-space: nowrap; color: var(--ink); }
+    #story .story-flow {
+      font-family: var(--font-mono); font-size: 0.76rem; line-height: 1.85;
+      white-space: pre; overflow-x: auto; color: var(--muted);
+      background: var(--bg2); border: 1px solid var(--rule);
+      border-radius: 6px; padding: 0.85rem 1rem;
+    }
+    #story .story-q { list-style: none; display: grid; gap: 0.6rem; margin-top: 0.7rem; }
+    #story .story-q li {
+      border: 1px solid var(--rule); border-left: 3px solid var(--accent2);
+      border-radius: 6px; background: var(--bg2); padding: 0.75rem 0.95rem;
+      font-size: 0.88rem; color: var(--muted); line-height: 1.65;
+    }
+    #story .story-q li b { display: block; color: var(--ink); margin-bottom: 0.15rem; }
+    #story .story-frags { display: grid; gap: 0.8rem; }
+    #story .story-frags article {
+      border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+      border-radius: 6px; background: var(--bg2); padding: 0.95rem 1.1rem;
+    }
+    #story .story-frags h3 { font-size: 0.93rem; font-weight: 700; margin-bottom: 0.4rem; }
+    #story .story-frags p, #story .story-frags li { font-size: 0.87rem; color: var(--muted); line-height: 1.7; }
+    #story .story-frags ul { list-style: none; display: grid; gap: 0.25rem; margin: 0.35rem 0; }
+    #story .story-frags li { padding-left: 0.75rem; position: relative; }
+    #story .story-frags li::before { content: '·'; position: absolute; left: 0.1rem; color: var(--accent); }
+    #story .story-frags b { color: var(--ink); font-weight: 700; }
+
     .hits { list-style: none; display: grid; gap: 0.35rem; margin: 0.75rem 0 0; }
     .hits li { font-size: 0.9rem; color: var(--muted); padding-left: 1rem; position: relative; }
     .hits li::before { content: '·'; position: absolute; left: 0.28rem; color: var(--accent2); font-weight: 700; }
@@ -614,6 +658,151 @@
           <h2>行动优先级<small>从机会卡到动作</small></h2>
         </div>
         <ol class="prio-list" id="prio-host"></ol>
+      </section>
+
+      <section id="story">
+        <div class="sec-head">
+          <span class="sec-no">故事</span>
+          <h2>2026 年，浦东水环境治理的一个窗口期<small>输入 47 份政策 / 招标 / 专项债 / 企业 / 事件 / 标准 / 资产 / 订单 / BOM 文档，加上 19 篇可回溯的研究语料，输出 6 家企业的商机卡</small></h2>
+        </div>
+
+        <p class="story-quote">
+          核心观点：<b>商机不是企业身上的标签，而是知识图谱上一条条可解释的推理路径。</b>
+          <span>本次运行快照（2026-11-08）：47 份业务文档 → 78 节点 / 219 条关系 → 23 条规则路径 × 6 家企业 → 489 条线索 → 122 张商机卡（A 11 / B 63 / C 42 / V 6）→ 74 张进入推送池、42 张低分过滤、6 张强否决 → 19 篇研究语料：14 张已核验 / 21 张部分核验 / 39 张待核验。</span>
+        </p>
+
+        <div class="story-h">一、时间线</div>
+        <p class="lede">2026 年上半年，浦东新区进入水环境治理的集中建设期：</p>
+        <div class="story-table-wrap">
+          <table>
+            <thead><tr><th>时间</th><th>发生了什么</th></tr></thead>
+            <tbody>
+              <tr><td>1 月</td><td>市住建委、水务局发布《关于加快浦东新区雨污分流改造实施方案》，要求管网改造同步配套在线监测</td></tr>
+              <tr><td>1 月</td><td>市级发布《城市内涝治理与海绵城市建设实施方案（2026-2028）》</td></tr>
+              <tr><td>2—3 月</td><td>区水务局连发管网提质增效、排涝设施提升、污水厂提标三份细则</td></tr>
+              <tr><td>3—4 月</td><td>两笔专项债发行：市政基础设施 2.6 亿元、排水防涝与水环境治理 3.1 亿元</td></tr>
+              <tr><td>4—5 月</td><td>浦东水务局、建交委放出 6 个招标项目，预算合计 6.74 亿元</td></tr>
+              <tr><td>5—10 月</td><td>扩产备案、融资拟建、询价、技改、已定标项目陆续出现</td></tr>
+              <tr><td>9 月</td><td>强制标准《城镇排水管网在线监测设施建设与运行技术标准》落地</td></tr>
+              <tr><td>9—10 月</td><td>园区招商、龙头企业框架订单、企业工商异动、供应商停产</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">对商机分析师来说，困难从来不是"没有信息"，而是：<b>政策只讲方向，专项债只讲资金，招标公告只讲资质门槛，企业资料只讲自己能做什么。</b>要把它们拼成一句"这个项目该不该跟"，通常要花掉一周。</p>
+
+        <div class="story-h">六家企业，六种能力画像</div>
+        <div class="story-table-wrap">
+          <table>
+            <thead><tr><th>企业</th><th>能力画像</th><th>资质</th><th>服务区域</th></tr></thead>
+            <tbody>
+              <tr><td>E01 上海浦城市政建设</td><td>市政管网工程</td><td>市政公用一级</td><td>浦东新区</td></tr>
+              <tr><td>E02 上海海蓝水务</td><td>水务管网施工 + 监测配套</td><td>市政公用二级、环保三级</td><td>上海全市 + 浦东</td></tr>
+              <tr><td>E03 上海联智传感</td><td>水务监测传感器</td><td>环保三级</td><td>浦东新区</td></tr>
+              <tr><td>E04 上海绿源水环境</td><td>排涝泵站、海绵城市、污水厂提标</td><td>市政公用一级、环保三级</td><td>浦东新区 + 上海全市</td></tr>
+              <tr><td>E05 上海汇芯电子</td><td>监测传感器元器件、数据采集模块</td><td>—</td><td>浦东新区</td></tr>
+              <tr><td>E06 上海临港水务运营</td><td>水务设施运营与维护（同时是设备采购方）</td><td>—</td><td>浦东新区</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">同一个项目池，六家企业应该得到六份不同的答案。这个 Demo 要验证的就是这件事。</p>
+
+        <div class="story-h">业务真正要回答的四个问题</div>
+        <ol class="story-q">
+          <li><b>哪些政策、资金、项目能连成一条确定的采购链？</b>不是"政策提到了水务"，而是"政策要求 → 专项债定向 → 具体项目开标 → 需求品类命中我方能力"。</li>
+          <li><b>对这家企业，缺什么、能不能投？</b>能力、资质、区域、竞争对手、时间窗口，逐项核对，直接输出"可直投 / 需联合体 / 只能跟踪"。</li>
+          <li><b>没有公开招标的信息，怎么提前发现？</b>扩产备案、融资拟建、强制技改、设备超期、上游停产、工商异动、耗材到期——这些才是隐式商机的核心。</li>
+          <li><b>这条线索可信吗？</b>谁说的、什么级别、金额口径是否一致、有没有多源冲突，必须能回溯到原文。</li>
+        </ol>
+
+        <div class="story-h">系统给出的答案</div>
+        <div class="story-flow">政策 / 债券 / 项目 / 企业 / 事件 / 标准 / 资产 / 订单 / BOM
+        │
+        ▼
+   双链知识图谱（D 需求侧 / S 供给侧，S —REQUIRES→ D 桥接）
+        │
+        ▼
+   23 条规则路径 → 489 条线索 → 按（企业, 商机类型, 归堆目标）聚成 122 张卡
+        │
+        ▼
+   因子打分 → 强否决 / 低分过滤 / 送 Deep Research 核验
+        │
+        ▼
+   置信度 + 分数修正 + 证据链 → 6 家企业各自的地图</div>
+        <p class="note">最终 74 张卡进入推送池，42 张因低于阈值被过滤，6 张因"已定标 / 已开工 / 已截止"被强否决。系统没有把所有线索都推给销售，而是明确地说出了"哪些不值得跟"。</p>
+
+        <div class="story-h">同一份数据，六张地图</div>
+        <div class="story-table-wrap">
+          <table>
+            <thead><tr><th>企业</th><th>线索 → 卡片</th><th>推送 / 过滤</th><th>一句话结论</th></tr></thead>
+            <tbody>
+              <tr><td>E01 浦城市政</td><td>91 → 23</td><td>12 / 10</td><td>市政一级是主体工程与技改的强项；监测 / 设备类询价需联合体补环保资质</td></tr>
+              <tr><td>E02 海蓝水务</td><td>151 → 29</td><td>18 / 10</td><td>覆盖最广：施工、监测、替换、断供、园区都能接，但一级资质项目需联合体</td></tr>
+              <tr><td>E03 联智传感</td><td>84 → 21</td><td>17 / 3</td><td>不碰土建，只做设备与监测；复购卡 85 分已核验</td></tr>
+              <tr><td>E04 绿源水环境</td><td>94 → 20</td><td>11 / 8</td><td>与浦城在泵站、海绵正面竞争；自身扩产项目不作为自己的供应商机会</td></tr>
+              <tr><td>E05 汇芯电子</td><td>59 → 19</td><td>13 / 5</td><td>元器件厂商，靠 BOM 与断供替代切入；其停产公告又成为 E02/E03 的替代商机</td></tr>
+              <tr><td>E06 临港水务运营</td><td>10 → 10</td><td>3 / 6</td><td>既是询价采购方，也是运维服务供给方；自身项目少，过滤率高</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">同一张"浦城泵站技改"卡，对 E02/E03/E04/E05 都是 100 分 A 级；对 E06 是 95 分；对 E01 则不成立——因为 E01 是业主，自有项目不作为自己的供应商机会。</p>
+
+        <div class="story-h">五个故事片段</div>
+        <div class="story-frags">
+          <article>
+            <h3>1. 显性机会：一条被三重确认的技改链</h3>
+            <p>以 <b>E02 看到的「浦城市政老港泵站设施技术改造项目」</b>为例：</p>
+            <ul>
+              <li><b>标准层</b>：强制标准要求 2026-12-31 前完成监测设施改造</li>
+              <li><b>政策层</b>：排涝设施提升三年行动要求同步配套监测</li>
+              <li><b>资产层</b>：存量监测站不满足新标准；水泵机组服役 9 年、质保 2025 年底到期、故障 3 次</li>
+              <li><b>项目层</b>：技改项目备案 2600 万元，未招标，设备采购以询价方式分批实施</li>
+              <li><b>BOM 层</b>：更换水泵机组 2 台、变频控制柜、自动化监控、液位计——拆到供给侧正好命中 E02/E03/E05 的能力</li>
+              <li><b>企业层</b>：E02 具备市政二级 + 环保三级，服务区域覆盖浦东</li>
+            </ul>
+            <p>系统给出 100 分、A 级、已核验（置信 1.0，+5 修正），并附两条 L1 证据：生态环境局的限期整改通知、政府采购网的技改采购意向。链路可以还原为：</p>
+            <div class="story-flow">E02 —CAN_UNDERTAKE→ 厂站土建与机电安装 / 水质监测与传感设备
+    —REQUIRES→ 排涝泵站工程 / 智慧水务平台与在线监测
+    ←NEED— 浦城市政老港泵站设施技术改造项目</div>
+          </article>
+
+          <article>
+            <h3>2. 隐式机会：融资公告背后的设备清单</h3>
+            <p>一条不是招标、只是"海蓝水务完成 B 轮增资 8000 万，投建临港智慧监测装备基地"的融资 / 拟建信息，传统招投标爬虫会直接漏掉它。系统做了三件事：</p>
+            <ul>
+              <li>从增资公告识别"资金用途写明设备 / 产线"</li>
+              <li>从拟建正文拆出数据采集终端、液位传感器产线、监测平台软件</li>
+              <li>把 BOM 对齐到对应的供给类目</li>
+            </ul>
+            <p>结果 E01/E03/E04/E05/E06 都拿到 100 分 A 级卡；核验阶段又用国家企业信用信息公示系统、浦东发改委重大项目库两条 L1 证据确认，置信 1.0。</p>
+          </article>
+
+          <article>
+            <h3>3. 存量复购：订单消耗周期到了</h3>
+            <p>E03 与 E06 有两笔历史框架订单（180 万、150 万），消耗周期 365 天，上次供货 2025-06，当前库存偏低。系统判定复购窗口已到，生成 E03 的复购卡：85 分、A 级、已核验（+5）。</p>
+            <p>这类商机不依赖新项目，而是依赖"客户还在、耗材会消耗"这一事实。</p>
+          </article>
+
+          <article>
+            <h3>4. 供应链传导：一家停产，另一家的机会</h3>
+            <p>E05 功率模块产线自 2026-10-20 起临时停产 6 周，下游 E01、E02 需要寻找替代供应。系统把"上游停产 + 供货物料赛道与我方同类"连起来，为 E02/E03 生成"替代汇芯电子供应缺口"卡（89 分，部分核验）。</p>
+            <p>同一条事件，对 E05 是风险，对 E02/E03 是机会——这正是图谱相对"行业标签筛选"的差异。</p>
+          </article>
+
+          <article>
+            <h3>5. 三个"不"：系统如何拒绝</h3>
+            <div class="story-table-wrap">
+              <table>
+                <thead><tr><th>案例</th><th>系统判断</th><th>原因</th></tr></thead>
+                <tbody>
+                  <tr><td>惠南片区排水管道修复（4200 万）</td><td><b>V 级，0 分，不推送</b></td><td>已定标、已开工，触发强否决；另有资金来源未落实扣分</td></tr>
+                  <tr><td>在保监测站替换</td><td><b>42 分，过滤</b></td><td>质保期到 2027-03，仍在保，直接压到阈值以下</td></tr>
+                  <tr><td>询价项目（对 E01/E04）</td><td><b>40—48 分，过滤</b></td><td>需求赛道与自身能力不匹配，未达到送检阈值</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>强否决卡不进入核验、不占用推送名额；低分卡保留下来，供复盘"为什么没推"。</p>
+          </article>
+        </div>
       </section>
     </main>
 
