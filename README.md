@@ -8,10 +8,14 @@
 
 ## story
 https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-story.html
----
+
+
 ## 看板
 
-直接打开 [https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-board.html]，可以浏览：
+直接打开 
+https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-board.html，
+
+可以浏览：
 
 - **企业切换**：联动 KPI、图表、机会卡、汇总表、行动优先级
 - **商机全景**：线索数、卡片数、A 级数、强否决数、类型分布、规则命中分布
