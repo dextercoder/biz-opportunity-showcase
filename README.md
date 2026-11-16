@@ -13,7 +13,7 @@ https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-story.htm
 ## 看板
 
 直接打开 
-https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-board.html，
+https://dextercoder.github.io/biz-opportunity-showcase/biz-opportunity-board.html
 
 可以浏览：
 
